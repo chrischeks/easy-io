@@ -1,9 +1,9 @@
 # EASYIO
-A simple application to test REST and SocketIO connectivity and experiment with node.js deployement models. This is an accompanying app 
+
+A simple application to test REST and SocketIO connectivity and experiment with node.js deployement models. This is an accompanying app
 for YouTube series - **"Deploying Node"** https://www.youtube.com/playlist?list=PLQlWzK5tU-gDyxC1JTpyC2avvJlt3hrIh
 
 Check out the deployed version at https://nanogram.io
-
 
 # Building locally
 
@@ -13,6 +13,7 @@ npm start
 ```
 
 # Running application
+
 easyio accepts argments, each of which is optional. Below are the arguments with their default values:
 
 `node main.js --name default --port 8080`
@@ -29,12 +30,14 @@ pm2 start --name easy-2 main.js -- --name easy-2 --port 8081
 ```
 
 # Project Structure
-The node.js app contains only one file - `main.js`. There are some static files to present a (reasonably awkward) 
+
+The node.js app contains only one file - `main.js`. There are some static files to present a (reasonably awkward)
 UI in `public` folder.
 
 NGINX configs are in `conf/nginx` folder
 
 # API
+
 An application exposes REST and SocketIO APIs
 
 ## REST API
@@ -46,7 +49,7 @@ An application exposes REST and SocketIO APIs
 `GET /api/info ` - responds with app version, reading it from `version.txt` file or 0 if no file is present, value of `__dirname` and `process.cwd()`. Useful to see which version is being served and where is it served from
 
 ## SocketIO API
+
 For every connected client, an application listens to `heartbeat` event. Once event is received, server will send back `heartbeat` event with the same payload as client sent, adding the name of the node that processed event. Useful to test socket.io connectivity as well as roundtrip times.
 
-
-# easy-io
+# easy-io readme
