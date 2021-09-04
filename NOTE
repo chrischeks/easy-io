@@ -1,0 +1,2 @@
+ifconfig (interface config)--> Shows all the network interfaces(IP addresses)
+netstat -tln (tcp-only want TCP connection l-only listening ports n-send IP addresses, donot resolve hostname)
